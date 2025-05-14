@@ -22,5 +22,5 @@ g++ -std=c++20 main.cpp -o club_data
 Для запуска программы необходимо передать файл содержащий входные данные:
 
 ```shell
-./program sample.txt
+./club_data sample.txt
 ```
