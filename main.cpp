@@ -40,10 +40,10 @@ struct Time {
 
 struct Event {
     Time t;
-    int id{};
+    int id = 0;
     std::vector<std::string> params;
     std::string rawLine;
-    int lineNo{};
+    int lineNo = 0;
 };
 
 struct TableInfo {
@@ -247,7 +247,7 @@ class Simulator {
             return;
         }
 
-        if (waiting.size() >= static_cast<size_t>(N)) {
+        if (waiting.size() >= N) {
             out << currentTime.str() << " 11 " << name << '\n';
             return;
         }
